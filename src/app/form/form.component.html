@@ -1,0 +1,110 @@
+<br><br><br>
+
+<!--diplay table-->
+
+<div class="container">
+ <table class="table">
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Action</th>
+        <th>Action</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let i of result">
+        <td>{{i.id}}</td>
+        <td>{{i.fname}}</td>
+        <td>{{i.lname}}</td>
+        <td>{{i.email}}</td>
+        <td><button class="btn btn-info" (click)="delete(i.id)">Delete</button></td>
+        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" (click)="edit(i)">Edit</button></td>
+        <td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal1" (click)="ad(i)">Add</button></td>
+    </tr>
+ </table>
+</div>
+
+<!--edit form-->
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      
+          <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                        <form [formGroup]="modalfm" >
+                            <div>
+                            <label>Enter First Name</label>
+                            <input formControlName="fname" class="form-control">
+                            </div>
+                            <div>       
+                            <label>Enter Last Name</label>
+                            <input formControlName="lname" class="form-control">
+                            </div>
+                            <div>
+                            <label>Email</label>
+                            <input formControlName="email"  class="form-control">
+                            </div>
+                         </form>
+                           <div class="modal-footer">
+                           <button type="submit" class="btn btn-success" (click)="update()">update</button>
+                           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                           </div>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+<!--add form-->
+
+<div id="myModal1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      
+          <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-body">
+                        <form [formGroup]="addfm" >
+                            <div>
+                            <label>Enter First Name</label>
+                            <input formControlName="fname" class="form-control">
+                            <div *ngIf="submitted && s.fname.errors" class="invalid-feedback">
+                                <p *ngIf="s.fname.errors.required">please enter your name</p>
+                                <p *ngIf="s.fname.errors.minlength">please enter atleast 5 charecters</p>
+                                <p *ngIf="s.fname.errors.maxlength">must not be less than 8 charecters</p>
+                            </div>
+                            </div>
+                            <div>       
+                            <label>Enter Last Name</label>
+                            <input formControlName="lname" class="form-control">
+                            <div *ngIf="submitted && s.fname.errors" class="invalid-feedback">
+                                    <p *ngIf="s.fname.errors.required">please enter your name</p>
+                                    <p *ngIf="s.lname.errors.minlength">please enter your name</p>
+                                    <p *ngIf="s.lname.errors.maxlength">please enter your name</p>
+                                </div> 
+                            </div>
+                            <div>
+                            <label>Email</label>
+                            <input formControlName="email"  class="form-control">
+                            <div *ngIf="submitted && s.fname.errors" class="invalid-feedback">
+                                    <p *ngIf="s.fname.errors.required">please enter your name</p>
+                                    <p *ngIf="s.lname.errors.minlength">please enter your name</p>
+                                    <p *ngIf="s.lname.errors.maxlength">please enter your name</p>
+                                </div> 
+                            </div>
+                            <div>
+                            <div class="modal-footer">      
+                            <button class="btn btn-success" style="margin:5px;" (click)="sub()">Submit</button>
+                            <button class="btn btn-info"  type="reset"  style="margin:5px;" value="Reset"> Reset</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>   
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

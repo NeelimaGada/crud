@@ -1,0 +1,68 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "fname": "varshadsd",
+      "lname": "Thangellapalli",
+      "email": "varsha.t@ojas-it.com"
+    },
+    {
+      "id": 2,
+      "fname": "Neere",
+      "lname": "fdf@gdfh",
+      "email": "fdgfgh"
+    },
+    {
+      "id": 3,
+      "fname": "fgfgdfh",
+      "lname": "fgfgf",
+      "email": "gfgf@wrfdgf"
+    },
+    {
+      "id": 4,
+      "fname": "gfgfg",
+      "lname": "fgfgf",
+      "email": "gfgg@gfdg"
+    },
+    {
+      "id": 5,
+      "fname": "gfgfg",
+      "lname": "fgfgf",
+      "email": "gfgg@gfdg"
+    },
+    {
+      "id": 6,
+      "fname": "fhghg",
+      "lname": "ghgh",
+      "email": "hfghf@fgdfh"
+    },
+    {
+      "id": 7,
+      "fname": "yjgj",
+      "lname": "jhjh",
+      "email": "hjhgjhj@gfdgf"
+    },
+    {
+      "id": 8,
+      "fname": "asdsad",
+      "lname": "",
+      "email": ""
+    },
+    {
+      "id": 9,
+      "fname": "ewewe",
+      "lname": "ewe",
+      "email": null
+    },
+    {
+      "id": 10,
+      "fname": "ewewedsfd",
+      "lname": "ewe",
+      "email": null
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

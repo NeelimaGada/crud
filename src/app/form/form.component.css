@@ -1,0 +1,17 @@
+th{
+    background-color:powderblue;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+tr:nth-child(even) {
+ background-color:azure;
+ font-family: "Times New Roman", Times, serif;
+ text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color:lightcyan;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+   
